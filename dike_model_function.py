@@ -97,8 +97,8 @@ class DikeNetwork(object):
                 # 2 Shift it to the degree of dike heigthening:
                 # 3 Calculate cumulative raising
 
-                node[f'fnew {s}'] = copy.deepcopy(node['f'])
-                node[f'dikeh_cum {s}'] = 0
+                node['fnew {}'.format(s)] = copy.deepcopy(node['f'])
+                node['dikeh_cum {}'.format(s)] = 0
                 
                 for ss in steps[steps <= s]:
                     node[f'fnew {s}'][:, 0] += node[f'DikeIncrease {ss}']                 
@@ -282,10 +282,12 @@ class DikeNetwork(object):
 
                 data.update({f'{dike}_Expected Annual Damage {s}': disc_EAD,
                          f'{dike}_Expected Number of Deaths {s}': END,
-                         f'{dike}_Dike Investment Costs {s}': node[f'dikecosts {s}']})
+                         '{}_Dike Investment Costs {}'.format(dike,s
+                                              ): node[f'dikecosts {s}']})
 
             data.update({f'RfR Total Costs {s}': G.nodes[
                                 f'RfR_projects {s}']['cost'.format(s)]})
             data.update({f'Expected Evacuation Costs {s}': np.sum(EECosts)})
 
+        data = {k:float(v) for k, v in data.items()}
         return data
