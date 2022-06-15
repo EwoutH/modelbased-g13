@@ -13,7 +13,7 @@ def sum_over(*args):
     return sum(args)
 
 
-def get_model_for_problem_formulation(problem_formulation_id):
+def get_model_for_problem_formulation(problem_formulation_id, sobol_switch=False):
     ''' Prepare DikeNetwork in a way it can be input in the EMA-workbench.
     Specify uncertainties, levers and problem formulation.
     '''
@@ -84,8 +84,11 @@ def get_model_for_problem_formulation(problem_formulation_id):
                                            dike_lev[lev_name][1]))
 
     # load uncertainties and levers in dike_model:
-    dike_model.uncertainties = uncertainties
-    dike_model.levers = levers
+    if sobol_switch == True:
+            dike_model.uncertainties = uncertainties + levers
+    else:
+        dike_model.uncertainties = uncertainties
+        dike_model.levers = levers
 
     # Problem formulations:
     # Outcomes are all costs, thus they have to minimized:
