@@ -1,6 +1,14 @@
 # Model based desicion making
 _Group 13 readme_
 
+M.E. Glowacki 
+E.M. ter Hoeven
+C.W. Ouwehand
+T.R. Sandbergen
+M.P. Streng
+M.   Verhagen
+
+
 In this readme an overview of the used code is given. Most work is done in Jupyter Notebooks. The ones that are significantly modified and used for the analysis in the main report, are listed below:
 
 - [Open exploration](1 Open exploration Group 13_v2.ipynb): Open exploration
