@@ -1,14 +1,19 @@
-# Model based desicion making
-_Group 13 readme_
+# Model based decision making Flood protection policies Zupthen
 
-M.E. Glowacki 
-E.M. ter Hoeven
-C.W. Ouwehand
-T.R. Sandbergen
-M.P. Streng
-M.   Verhagen
+This project is part of the EPA1361 Model based decision making (MBDM) course at the Faculty of Technology, Policy and Management at the Delft University of Technology.
 
+## Authors
+- M.E. Glowacki   (4431421)
+- E.M. ter Hoeven (4493346)
+- C.W. Ouwehand   (4293053)
+- T.R. Sandbergen (4720814)
+- M.P. Streng     (4728920)
+- M.   Verhagen   (4611136)
 
+## Paper
+The main research paper written is located directly here in the main directory, called [G13_MBDM_Flood_protection_policies_Zupthen.pdf](G13_MBDM_Flood_protection_policies_Zupthen.pdf). The political reflection on the debates is included in the paper, in Part II, Chapter 8.
+
+## Code
 In this readme an overview of the used code is given. Most work is done in Jupyter Notebooks. The ones that are significantly modified and used for the analysis in the main report, are listed below:
 
 - [Open exploration](1 Open exploration Group 13_v2.ipynb): Open exploration
@@ -22,11 +27,17 @@ The following files have been used for the debate:
 - [Problem Formulations](6 Problem Formulations.ipynb): Searches empirically for optimal policies for Zuthen
 - [Rijkswaterstaat policies](7 Rijkswaterstaat policies.ipynb): Checks the policies that have been proposed by Rijkswaterstaat
 
-# Pickles
+## Pickles
 Pickles: Note that in all of these Notebook files pickles have been used. These pickles have been used to save the data of every run. By setting the pickle at *True*, the Pthon file will use the data of the previous run to process for example graphs or Dataframes. By setting the pickle at *False* the entire model will restart the run and save it into a pickle. This will demand a significant amount of computational power and is only advised for external validation.
 
-# Data storage
-Furthermore all data has been stored in the *data* file. This file contains for instance all the pickle files that have been made.
+## Data storage
+Furthermore, all data has been stored in the *data* folder. This folder contains for instance all the pickle files that have been made.
 
-# Figures
-The figures have been stored in the *images* file. If a Jupyter Notebook plots a figure again, the figure in the image file will be overwritten.
+## Results
+The results are reproducible by running the notebooks linearly. For convenience, the *results* folder also contains the most important results in CSV files.
+
+## Figures
+The figures have been stored in the *images* folder. If a Jupyter Notebook plots a figure again, the figure in the image file will be overwritten.
+
+## License
+This whole project is available under GPLv3 license.
